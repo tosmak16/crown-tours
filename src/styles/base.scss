@@ -1,14 +1,62 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins:400,500,600,700&display=swap");
 @import "./variables";
 
-body {
-  font-family: $body-font;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: $body-font;
+  color: $main-black;
+  background: $main-white;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1.25rem;
+  letter-spacing: $main-spacing;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: $main-spacing;
+  color: $main-white;
+  border: 2px solid $main-white;
+  padding: 0.9rem 1.6rem;
+  display: inline-block;
+  transition: $main-transition;
+  cursor: pointer;
+}
+
+.btn-white:hover {
+  background: $main-white;
+  color: $primary-color;
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: $main-white;
+  border: 2px solid $primary-color;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: $primary-color;
 }

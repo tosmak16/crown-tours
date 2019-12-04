@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import "./blog.scss"
+import "./blog.scss";
 
 const blog = () => {
-  return <div>Blog</div>
-}
+  return <div>Blog</div>;
+};
 
-export default blog
+export default blog;
