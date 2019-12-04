@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
+import About from "../components/About";
+import Services from "../components/Services";
 
 export default () => (
   <div>
@@ -18,6 +20,8 @@ export default () => (
           </Link>
         </Banner>
       </Hero>
+      <About />
+      <Services />
     </Layout>
   </div>
 );
