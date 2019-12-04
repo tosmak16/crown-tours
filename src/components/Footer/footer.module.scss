@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+.footer {
+  background: $main-black;
+  padding: 2rem;
+  text-align: center;
+  color: $main-white;
+}
+
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $main-white;
+  margin: 0.5rem 1rem;
+  letter-spacing: $main-spacing;
+  transition: $main-transition;
+  font-weight: bold;
+}
+
+.links a:hover {
+  color: $primary-color;
+}
+
+.icons a {
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: $main-white;
+  transition: $main-transition;
+}
+
+.icons a:hover {
+  color: $primary-color;
+}
+
+.copyright {
+  text-transform: capitalize;
+  letter-spacing: $main-spacing;
+  line-height: 2;
+}
