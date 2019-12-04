@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Poppins:400,500,600,700&display=swap");
+@import "./variables";
+
+body {
+  font-family: $body-font;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
