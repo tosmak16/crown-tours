@@ -1,7 +1,20 @@
-import React from "react"
+import React from "react";
+import { Link } from "gatsby";
 
-const error = () => {
-  return <div>404 page</div>
+import Banner from "../../components/Banner";
+import Layout from "../../components/Layout";
+
+import styles from "./error.module.scss";
+export default function error() {
+  return (
+    <Layout>
+      <header className={styles.error}>
+        <Banner title="oops it's a dead end">
+          <Link to="/" className="btn-white">
+            back to home page
+          </Link>
+        </Banner>
+      </header>
+    </Layout>
+  );
 }
-
-export default error
