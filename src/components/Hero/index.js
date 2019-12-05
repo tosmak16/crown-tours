@@ -1,9 +1,24 @@
 import React from "react";
-
-import "./Hero.scss";
-
-const Hero = ({ children }) => {
-  return <header className="defaultHero">{children}</header>;
+import styled from "styled-components";
+import BackgroundImage from "gatsby-background-image";
+const Hero = ({ img, className, children, home }) => {
+  return (
+    <BackgroundImage className={className} fluid={img} home={home}>
+      {children}
+    </BackgroundImage>
+  );
 };
 
-export default Hero;
+export default styled(Hero)`
+  min-height: ${props => (props.home ? "calc(100vh - 62px)" : "50vh")};
+  background: ${props =>
+    props.home
+      ? "linear-gradient(rgba(218, 165, 32, 0.6), rgba(0, 0, 0, 0.7))"
+      : "none"};
+  background-position: center;
+  background-size: cover;
+  opacity: 1 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
