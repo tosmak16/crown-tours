@@ -1,7 +1,7 @@
-const path = require("path")
+const path = require("path");
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   const { data } = await graphql(`
     query {
@@ -12,8 +12,15 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      posts: allContentfulBlog {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
-  `)
+  `);
   data.tours.edges.forEach(({ node }) => {
     createPage({
       path: `tours/${node.slug}`,
@@ -21,6 +28,15 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: node.slug,
       },
-    })
-  })
-}
+    });
+  });
+  data.posts.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.slug}`,
+      component: path.resolve("./src/components/SingleBlogTemplate/index.js"),
+      context: {
+        slug: node.slug,
+      },
+    });
+  });
+};
