@@ -43,15 +43,11 @@ const Contact = () => {
               id="message"
               rows="10"
               className={styles.formControl}
-              placeholder="hello there"
+              placeholder="Message"
             />
           </div>
           <div>
-            <input
-              type="submit"
-              value="submit here"
-              className={styles.submit}
-            />
+            <input type="submit" value="Submit" className={styles.submit} />
           </div>
         </form>
       </div>
