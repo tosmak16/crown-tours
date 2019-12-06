@@ -1,0 +1,90 @@
+@import "../../styles/variables";
+
+.tour {
+  box-shadow: $light-shadow;
+  transition: $main-transition;
+}
+
+.tour:hover {
+  box-shadow: $dark-shadow;
+}
+
+.img-container {
+  position: relative;
+  background: $primary-color;
+  transition: $main-transition;
+}
+
+.img {
+  transition: $main-transition;
+}
+
+.img-container:hover .img {
+  opacity: 0.3;
+}
+
+.link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: $main-spacing;
+  color: $main-white;
+  border: 2px solid $main-white;
+  padding: 0.9rem 1.6rem;
+  display: inline-block;
+  transition: $main-transition;
+  cursor: pointer;
+}
+
+.link:hover {
+  background: $main-white;
+  color: $primary-color;
+}
+
+.img-container:hover .link {
+  opacity: 1;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: left;
+}
+
+.footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.info h6,
+.info h4 {
+  margin-bottom: 0;
+}
+
+.country {
+  text-transform: capitalize;
+  color: $primary-color;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.4rem;
+}
+
+.details {
+  color: $dark-grey;
+  text-transform: uppercase;
+  text-align: right;
+}

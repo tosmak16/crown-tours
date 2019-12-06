@@ -3,11 +3,14 @@ import { graphql } from "gatsby";
 
 import Layout from "../../components/Layout";
 import Hero from "../../components/Hero";
-export default class tours extends Component {
+import ToursGallery from "../../components/ToursGallery";
+
+export default class Tours extends Component {
   render() {
     return (
       <Layout>
         <Hero img={this.props.data.defaultBcg.childImageSharp.fluid} />
+        <ToursGallery />
       </Layout>
     );
   }
